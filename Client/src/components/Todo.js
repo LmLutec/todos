@@ -16,7 +16,7 @@ const Todo = () => {
       dueDate,
       category,
     };
-    axios.post("localhost:3000/todos", data).then((res) => {
+    axios.post("http://localhost:5000/remindme/todos", data).then((res) => {
       console.log(res);
     });
   };

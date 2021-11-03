@@ -2,10 +2,10 @@ const mongoose = require("mongoose");
 
 const connectDB = async () => {
   try {
-    await mongoose.connect("mongodb://localhost/todos", {
+    await mongoose.connect("mongodb://localhost/remindme", {
       useUnifiedTopology: true,
       useNewUrlParser: true,
-      useFindAndModify: false,
+      //   useFindAndModify: false,
     });
     console.log("MongoDB Connected...");
   } catch (err) {

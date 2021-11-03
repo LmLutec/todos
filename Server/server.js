@@ -20,7 +20,7 @@ app.use(function (req, res, next) {
 app.get("/", (req, res) => res.send("API running"));
 
 // define routes
-app.use("/todos/", require("./routes/todos-routes"));
+app.use("/remindme/", require("./routes/todos-routes"));
 
 const PORT = process.env.PORT || 5000;
 
