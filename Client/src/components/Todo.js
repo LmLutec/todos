@@ -1,13 +1,24 @@
 import React, { useState } from "react";
 import "../styles/Todo.css";
+import axios from "axios";
 
 const Todo = () => {
   const [task, setTask] = useState("");
   const [dueDate, setDueDate] = useState("");
   const [category, setCategory] = useState("");
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     console.log("submitted");
+
+    const data = {
+      task,
+      dueDate,
+      category,
+    };
+    axios.post("localhost:3000/todos", data).then((res) => {
+      console.log(res);
+    });
   };
 
   return (

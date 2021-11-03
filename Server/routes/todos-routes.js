@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const User = require("../models/Todos");
+const Todo = require("../models/Todos");
 
 // get tasks
 router.get("/todos", async (req, res) => {
@@ -13,37 +13,21 @@ router.get("/todos", async (req, res) => {
 });
 
 // create user
-router.post("/users", async (req, res) => {
+router.post("/todos", async (req, res) => {
   console.log("in route");
-  const {
-    fName,
-    lName,
-    role,
-    city,
-    state,
-    schoolDistrict,
-    email,
-    phoneNumber,
-    password,
-  } = req.body;
+  const { task, dueDate, category } = req.body;
   console.log(req.body);
   try {
-    const user = new User({
-      fName,
-      lName,
-      role,
-      city,
-      state,
-      schoolDistrict,
-      email,
-      phoneNumber,
-      password,
+    const todo = new Todo({
+      task,
+      dueDate,
+      category,
     });
-    console.log(user);
+    console.log(todo);
 
     // add to DB
-    await user.save();
-    res.status(200).json({ user });
+    await todo.save();
+    res.status(200).json({ todo });
   } catch (err) {
     console.log(err);
     res.status(500).send("server error");
