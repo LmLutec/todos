@@ -1,0 +1,32 @@
+.todoContainer {
+  display: flex;
+}
+
+.todoForm {
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 10px rgb(224, 224, 224);
+  width: 35em;
+}
+
+.todoForm input {
+  border: none;
+  border-bottom: 1px solid rgb(245, 236, 236);
+  font-size: 1em;
+  text-align: center;
+  cursor: text;
+}
+
+.todoForm [type="submit"] {
+  cursor: pointer;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.todoForm [type="submit"]:hover {
+  font-size: 1.5em;
+  border: none;
+}
