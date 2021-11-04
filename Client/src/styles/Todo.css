@@ -9,12 +9,16 @@
   margin: 10px;
 }
 
+.todoItem:hover {
+  transform: scale(1.1);
+}
+
 .complete {
   text-align: right;
   padding: 0;
 }
 
-.complete :hover {
+.complete:hover {
   cursor: pointer;
 }
 
@@ -22,4 +26,7 @@
   text-align: center;
 }
 
+.dueDate {
+  text-align: left;
+}
 /* rgb(133, 162, 179) */

@@ -19,8 +19,9 @@ const Todo = (todo) => {
     <div className="todoItem">
       {/* {console.log(todo.item)} */}
       <Notifications />
+      <i className="dueDate">{todo.item.dueDate}</i>
       <h4 className="task">{todo.item.task}</h4>
-      <i>{todo.item.dueDate}</i>
+
       <div
         className="complete"
         onClick={() => {
