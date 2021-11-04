@@ -7,6 +7,7 @@ const Todo = (todo) => {
       {/* {console.log(todo.item)} */}
       <h4>{todo.item.task}</h4>
       <i>{todo.item.dueDate}</i>
+      <h5 className="complete">Mark Complete</h5>
     </div>
   );
 };
