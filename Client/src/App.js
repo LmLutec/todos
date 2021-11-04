@@ -40,12 +40,12 @@ function App() {
 
   return (
     <div>
+      <CompletionData list={list} />
       <div className="App">
         <h1 className="todoHdr">todos</h1>
         <CreateTodo />
       </div>
       <TodoList list={list} />
-      <CompletionData list={list} />
     </div>
   );
 }

@@ -2,8 +2,6 @@
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .App-logo {
@@ -42,8 +40,7 @@
 }
 
 .todoHdr {
-  color: gray;
+  color: rgb(14, 97, 6);
   font-size: 4em;
   font-weight: lighter;
-  display: flex;
 }

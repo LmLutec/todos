@@ -17,7 +17,6 @@ const Todo = (todo) => {
 
   return (
     <div className="todoContainer">
-      {/* {console.log(todo.item)} */}
       <div className="todoItem">
         <Notifications />
         <div className="icons">
