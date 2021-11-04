@@ -9,6 +9,11 @@
 
 .complete {
   text-align: right;
+  padding: 0;
+}
+
+.complete :hover {
+  cursor: pointer;
 }
 
 .task {

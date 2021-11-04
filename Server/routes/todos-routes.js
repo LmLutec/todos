@@ -35,6 +35,24 @@ router.post("/todos", async (req, res) => {
   }
 });
 
+//edit complete status
+router.put("/editcomplete/:id", async (req, res) => {
+  try {
+    const { complete } = req.body;
+    const { id } = req.params;
+
+    console.log(req.body);
+    console.log(req.params);
+    const todo = await Todo.findByIdAndUpdate(id, {
+      complete,
+    });
+
+    res.status(200).json({ todo });
+  } catch (err) {
+    res.status(500).send("server error");
+  }
+});
+
 // edit user
 // router.put("/edituser/:id", async (req, res) => {
 //   console.log("in route");
