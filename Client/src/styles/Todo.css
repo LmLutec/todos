@@ -1,10 +1,20 @@
+.todoContainer {
+  flex-wrap: wrap;
+}
+
 .todoItem {
   display: flex;
   flex-direction: column;
-  border: 1px solid black;
-  width: 50%;
+  border: 1px solid white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px 10px rgb(220, 224, 226);
+  width: 35%;
   padding: 5px;
   margin: 10px;
+}
+
+.todoItem:hover {
+  transform: scale(1.1);
 }
 
 .complete {
@@ -12,10 +22,29 @@
   padding: 0;
 }
 
-.complete :hover {
+.complete:hover {
   cursor: pointer;
 }
 
 .task {
   text-align: center;
 }
+
+.dueDate {
+  text-align: right;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.editIcon {
+  padding: 0;
+}
+
+.editIcon:hover {
+  transform: scale(1.1);
+}
+
+/* rgb(133, 162, 179) */
