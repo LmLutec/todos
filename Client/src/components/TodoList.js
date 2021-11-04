@@ -38,9 +38,11 @@ const TodoList = () => {
   return (
     <div>
       <h1>Here is where the list will go</h1>
-      {list.map((item) => (
-        <Todo item={item} />
-      ))}
+      <div className="listContainer">
+        {list.map((item) => (
+          <Todo key={item._id} item={item} className="listItem" />
+        ))}
+      </div>
     </div>
   );
 };
