@@ -38,7 +38,7 @@ const TodoList = () => {
 
   return (
     <div>
-      <h1>Here is where the list will go</h1>
+      <h1>Goals</h1>
       <div className="listContainer">
         {list
           .filter((l) => l.complete === false)
