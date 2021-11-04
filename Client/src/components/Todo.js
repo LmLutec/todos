@@ -5,12 +5,12 @@ const Todo = (todo) => {
   return (
     <div className="todoItem">
       {/* {console.log(todo.item)} */}
-      <h4>{todo.item.task}</h4>
+      <h4 className="task">{todo.item.task}</h4>
       <i>{todo.item.dueDate}</i>
       <div className="complete">
         <svg
           width="24"
-          height="20"
+          height="15"
           viewBox="0 0 24 20"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
