@@ -13,6 +13,10 @@ const TodosSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  complete: {
+    type: Boolean,
+    required: true,
+  },
 });
 
 module.exports = Todo = mongoose.model("Todo", TodosSchema);

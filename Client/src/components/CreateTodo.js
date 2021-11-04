@@ -6,15 +6,16 @@ const CreateTodo = () => {
   const [task, setTask] = useState("");
   const [dueDate, setDueDate] = useState("");
   const [category, setCategory] = useState("");
+  // const [complete, setComplete] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("submitted");
 
     const data = {
       task,
       dueDate,
       category,
+      complete: false,
     };
     axios.post(`http://localhost:5000/remindme/todos`, data).then((res) => {
       console.log(res);

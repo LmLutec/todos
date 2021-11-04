@@ -4,6 +4,7 @@ import Todo from "./Todo";
 
 const TodoList = () => {
   const [list, setList] = useState([]);
+  const [complete, setComplete] = useState(false);
 
   useInterval(() => {
     getTasks();
@@ -39,9 +40,11 @@ const TodoList = () => {
     <div>
       <h1>Here is where the list will go</h1>
       <div className="listContainer">
-        {list.map((item) => (
-          <Todo key={item._id} item={item} className="listItem" />
-        ))}
+        {list
+          .filter((l) => l.complete === false)
+          .map((item) => (
+            <Todo key={item._id} item={item} className="listItem" />
+          ))}
       </div>
     </div>
   );
